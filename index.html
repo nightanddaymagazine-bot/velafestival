@@ -20,7 +20,8 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1600') center/cover;
+            background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+                url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1600') center/cover;
             color: #FFF8F0;
             text-align: center;
             padding: 160px 20px 100px;
@@ -71,6 +72,22 @@
             font-weight: 600;
         }
 
+        .backstage-banner {
+            background: #1A1A1A;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .backstage-banner a {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .backstage-banner img {
+            max-width: 350px;
+            height: auto;
+        }
+
         section {
             padding: 80px 20px;
             max-width: 1200px;
@@ -92,7 +109,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         h2.artists-title {
             color: white !important;
             text-align: center;
@@ -154,6 +171,13 @@
             margin-bottom: 10px;
         }
 
+        .artist-card .clive-bunker {
+            color: #8B0000;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
         .day-header {
             background: rgba(255,255,255,0.1);
             color: #FFF8F0;
@@ -173,10 +197,57 @@
             font-weight: 600;
         }
 
+        .partners-section {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .partner-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .partner-item img {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .partner-item h4 {
+            color: #8B0000;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
         .contacts {
             background: #1a1a1a;
             color: white;
             padding: 80px 20px;
+        }
+
+        .contacts h2 {
+            color: white;
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #C9A84C;
+            padding-bottom: 15px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .contact-grid {
@@ -211,11 +282,11 @@
         }
 
         footer {
-            background: #000;
-            color: #777;
+            background: #FFF8F0;
+            color: #333;
             text-align: center;
             padding: 60px 20px;
-            border-top: 1px solid #333;
+            border-top: 1px solid #ddd;
         }
 
         .footer-logo {
@@ -225,137 +296,164 @@
     </style>
 </head>
 <body>
-
     <header class="hero">
         <div class="logo-container">
-            <img src="https://www.nightanddaymag.com/media/general-news/626/vema_light_optimized.jpg" alt="VeMA Logo" class="logo">
-            <div class="claim-header">
-                <h1>Venezia Musica d'Autore</h1>
-                <p>Dove la Musica incontra Venezia</p>
-            </div>
+            <img src="https://nightanddaymag.com/media/general-news/626/VeMA_logo.png" alt="VeMA Logo" class="logo">
         </div>
-
-        <div class="date">
-            10 · 11 · 12 · 17 · 18 Luglio 2026<br>
-            Forte Bazzera, Venezia
+        <div class="claim-header">
+            <h1>Venezia Musica d'Autore</h1>
+            <p>Dove la Musica incontra Venezia</p>
         </div>
+        <div class="date">10 · 11 · 12 · 17 · 18 Luglio 2026<br>Forte Bazzera, Venezia</div>
     </header>
 
+    <div class="backstage-banner">
+        <a href="https://backstage.global/collection/ad9c23c3-d986-4342-8280-4f7357bc84b0" target="_blank">
+            <img src="https://newbksbackstage.s3.eu-north-1.amazonaws.com/img/header/backstage_logo.svg" alt="Backstage">
+        </a>
+    </div>
+
     <section>
+        <h2 class="location-title">La Location</h2>
         <div class="location-box">
-            <h2 class="location-title">La Location</h2>
             <p><strong>Forte Bazzera</strong> è un'oasi verde unica affacciata sulla Laguna di Venezia, a pochi minuti dall'Aeroporto Internazionale Marco Polo. Una location storica e suggestiva che ospiterà cinque giorni di musica, arte e cultura veneziana.</p>
         </div>
     </section>
 
-    <div class="artists-section">
+    <section class="artists-section">
         <div class="artists-container">
-            <h2 class="artists-title">Gli Artisti</h2>
 
-            <div class="day-header">VENERDÌ 10 LUGLIO</div>
-            <div class="artists-grid">
+                <!-- VENERDÌ 10 LUGLIO -->
+                <div class="day-header">VENERDÌ 10 LUGLIO</div>
+
                 <div class="artist-card">
                     <h3>ELP TARKUS PROJECT</h3>
                     <strong>Tribute to Emerson Lake & Palmer</strong>
                     <p>Un omaggio alla leggendaria band progressive rock con l'esecuzione integrale dell'album Tarkus.</p>
                 </div>
+
                 <div class="artist-card">
                     <h3>LUCA MINNELLI & FRIENDS</h3>
                     <strong>Tenore Internazionale</strong>
                     <p>Special guest: <strong>KERRY ELLIS</strong></p>
                     <p>Voce lirica di prestigio internazionale che porterà l'eccellenza del belcanto italiano.</p>
                 </div>
-            </div>
 
-            <div class="day-header">SABATO 11 LUGLIO</div>
-            <div class="artists-grid">
+                <!-- SABATO 11 LUGLIO -->
+                <div class="day-header">SABATO 11 LUGLIO</div>
+
                 <div class="artist-card">
                     <h3>LINCOLN QUARTET</h3>
+                    <span class="clive-bunker">CON CLIVE BUNKER</span>
                     <strong>Plays Jethro Tull</strong>
-                    <p>Un quartetto d'archi che reinterpreta i capolavori dei Jethro Tull in chiave classica.</p>
+                    <p>Il quartetto d'archi ospita il Batterista Fondatore dei Jethro Tull e reinterpreta i capolavori storici della band in chiave classica.</p>
                 </div>
+
                 <div class="artist-card">
                     <h3>LE ORME</h3>
                     <strong>Venezia, 61 anni di attività</strong>
                     <p>Presentazione esclusiva dello show 'LE ORME PLAYS VENICE' - un viaggio musicale da Vivaldi ai Pink Floyd, con orchestra classica e ospiti speciali tra cui il compositore Francesco Sartori.</p>
                 </div>
+
                 <div class="artist-card">
                     <h3>BERNARDO LANZETTI</h3>
                     <strong>Icona del Progressive Rock Italiano</strong>
                     <p>Voce storica dei Premiata Forneria Marconi e degli Acqua Fragile.</p>
                 </div>
-            </div>
 
-            <div class="day-header">DOMENICA 12 LUGLIO</div>
-            <div class="artists-grid">
+                <!-- DOMENICA 12 LUGLIO -->
+                <div class="day-header">DOMENICA 12 LUGLIO</div>
+
                 <div class="artist-card">
                     <h3>T-SIDE TOTO PROJECT</h3>
                     <strong>Tribute Band</strong>
                     <p>Il miglior tributo italiano alla leggendaria band Toto.</p>
                 </div>
+
                 <div class="artist-card">
                     <h3>MASSIMO BUBOLA</h3>
                     <strong>Cantautore e Compositore</strong>
                     <p>Autore per Fabrizio De André, Fiorella Mannoia e molti altri grandi della musica italiana.</p>
                 </div>
+
                 <div class="artist-card">
                     <h3>OF NEW TROLLS</h3>
                     <strong>Genova, 60° anniversario</strong>
                     <p>Anteprima: "Noi e Fabrizio De André"</p>
                     <p>Sette partecipazioni al Festival di Sanremo. Hanno accompagnato Fabrizio De André nel suo primo tour con il compositore premio Oscar Luis Bacalov.</p>
                 </div>
-            </div>
 
-            <div class="day-header">VENERDÌ 17 LUGLIO</div>
-            <div class="artists-grid">
+                <!-- VENERDÌ 17 LUGLIO -->
+                <div class="day-header">VENERDÌ 17 LUGLIO</div>
+
                 <div class="artist-card">
                     <h3>I NOMADI</h3>
                     <strong>Leggenda della musica italiana</strong>
                     <p>Una delle band più longeve e amate della musica italiana, con oltre 60 anni di carriera.</p>
                 </div>
-            </div>
 
-            <div class="day-header">SABATO 18 LUGLIO - GRAN GALÀ FINALE</div>
-            <div class="artists-grid">
+                <!-- SABATO 18 LUGLIO -->
+                <div class="day-header">SABATO 18 LUGLIO - GRAN GALÀ FINALE</div>
+
                 <div class="artist-card">
                     <h3>GRAN GALÀ FINALE</h3>
                     <strong>Serata conclusiva</strong>
                     <p>Migliori DJ Veneti<br>Guest DJ: <strong>Alfred Azzetto</strong></p>
                     <p>Una notte speciale dedicata alla musica elettronica e al talento veneto, celebrando il meglio della scena DJ regionale.</p>
                 </div>
+
             </div>
-
-            <p class="conservatorio-partner">
-                In collaborazione con il Conservatorio Benedetto Marcello di Venezia<br>
-                Partner culturale ufficiale
-            </p>
+            <p class="conservatorio-partner">In collaborazione con il Conservatorio Benedetto Marcello di Venezia<br>Partner culturale ufficiale</p>
         </div>
-    </div>
+    </section>
 
+    <!-- PARTNERS SECTION -->
+    <section class="partners-section" style="background: #FDF5E6;">
+        <h2 style="color: #8B0000; text-align: center; font-size: 2.8em; margin-bottom: 20px;">Partner</h2>
+        <div class="partners-grid">
+            <div class="partner-item">
+                <h4>Media Partner</h4>
+                <a href="https://www.nightanddaymag.com/" target="_blank">
+                    <img src="https://www.nightanddaymag.com/media/general-news/626/ND_logo.png" alt="ND Magazine">
+                </a>
+            </div>
+            <div class="partner-item">
+                <h4>Partner</h4>
+                <a href="https://www.comune.venezia.it/it/content/chi-siamo-citta-in-festa" target="_blank">
+                    <img src="https://www.pngkey.com/png/full/460-4603686_venice-mockup-vector-mockup-venice-city.png" alt="Venezia Città in Festa">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS SECTION -->
     <section class="contacts">
         <h2>Contatti</h2>
         <div class="contact-grid">
             <div class="contact-card">
                 <h3>Christian Dori</h3>
-                <strong>Founder & CCO</strong>
+                <p><strong>Founder & CCO</strong></p>
                 <p>Backstage.global / ND Magazine</p>
-                <p><a href="mailto:cd@backstage.global">cd@backstage.global</a></p>
-                <p><a href="tel:+34628298690">+34 628 298 690</a></p>
+                <a href="mailto:cd@backstage.global">cd@backstage.global</a>
+                <br>
+                <a href="tel:+34628298690">+34 628 298 690</a>
             </div>
             <div class="contact-card">
                 <h3>Enrico Vesco</h3>
-                <strong>Organization</strong>
+                <p><strong>Organization</strong></p>
                 <p>Sonny Boy / VeMA Festival</p>
-                <p><a href="mailto:e.vesco@sonnyboy.it">e.vesco@sonnyboy.it</a></p>
-                <p><a href="tel:+393922873208">+39 392 287 3208</a></p>
+                <a href="mailto:e.vesco@sonnyboy.it">e.vesco@sonnyboy.it</a>
+                <br>
+                <a href="tel:+393922873208">+39 392 287 3208</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <img src="https://www.nightanddaymag.com/media/general-news/626/vema_logo_transparent.png" alt="VeMA Logo" class="footer-logo">
+        <img src="https://nightanddaymag.com/media/general-news/626/VeMA_logo.png" alt="VeMA Logo" class="footer-logo">
         <p>© 2026 VeMA Festival - Venezia Musica d'Autore. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
+            <h2 class="artists-title">Gli Artisti</h2>
+            <div class="artists-grid">
